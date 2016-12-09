@@ -97,7 +97,7 @@ While this is a bit technical, it's worth clarifying some terminology...
 
 ## Exploring Postgres
 
-We are learning in order to be able to read it. We'll look stuff up when we want to write it.
+We are learning in order to be able to read SQL. We'll look stuff up when we want to write it.
 
 Start by "spotlight searching" (`command-space`) for Postgres and launching `Postgres.app`. Once you see the elephant in your Mac menu bar, you'll know Postgres is running.
 
