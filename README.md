@@ -6,8 +6,8 @@
 
 **Concepts**
 - Explain what a database is and why you would use one
-- Explain how a DBMS, a database, and SQL relate to one another
-- Describe a database schema and how it relates to tables, rows and columns
+- Explain how a database management system (DBMS), a database, and SQL relate to one another
+- Describe a database schema and how it relates to tables, rows, and columns
 
 **Mechanics**
 - Create a new PostgreSQL database
@@ -23,7 +23,6 @@
 - Distinguish between keys, foreign keys, and indexes
 - Describe the purpose of the JOIN
 - Use JOIN to combine tables in a SELECT
-- Describe what it means for a database to be normalized
 
 
 # Databases
@@ -51,7 +50,7 @@ won't be lost (unless the server catches on fire).
 
 **Consistency** - Databases can enforce rules regarding consistency of data, especially when handling simultaneous requests to update information.
 
-**Scalability** - Databases can lots of requests per second, and many DBs have ways to scale to massive loads by replicating / syncing information across multiple DBs.
+**Scalability** - Databases can handle lots of requests per second, and many DBs have ways to scale to massive loads by replicating / syncing information across multiple DBs.
 
 **Querying** - DBs make it easy to search, sort, filter and combine related data using a Query Language.
 
@@ -114,10 +113,10 @@ help -- general help
 \h   -- help with SQL commands
 \l   -- Lists all databases
 
-CREATE DATABASE wdi12; -- Don't forget the semicolon!
+CREATE DATABASE wdi1; -- Don't forget the semicolon!
 \l -- What changed?
 
-\c wdi12 -- Connect to wdi8 database
+\c wdi1 -- Connect to wdi1 database
 
 \d -- Lists all tables
 
@@ -134,23 +133,23 @@ CREATE TABLE students (
 
 SELECT * FROM students;
 
-INSERT INTO students (first_name, last_name) VALUES ('Andy', 'Kim');
+INSERT INTO students (first_name, last_name) VALUES ('Stewie', 'Griffin');
 -- This won't work!
 
-INSERT INTO students (first_name, last_name, quote, birthday, ssn) VALUES ('Andy', 'Kim', 'Two goldfish are in a tank. One says, "Know how to drive this thing?"', 'April 7', 8675309);
+INSERT INTO students (first_name, last_name, quote, birthday, ssn) VALUES ('Stewie', 'Griffin', 'Victory is mine!', 'June 30', 852698);
 SELECT * FROM students;
 
-UPDATE students SET first_name = 'Andrew' WHERE first_name = 'Andy';
+UPDATE students SET first_name = 'Stewart' WHERE first_name = 'Stewie';
 SELECT * FROM students;
 
-DELETE FROM students WHERE first_name = 'Andy';
-DELETE FROM students WHERE first_name = 'Andrew';
+DELETE FROM students WHERE first_name = 'Stewie';
+DELETE FROM students WHERE first_name = 'Stewart';
 
 SELECT * FROM students;
 
 DROP TABLE students; -- "drop" means to delete an entire table or database
 
-DROP DATABASE wdi8;
+DROP DATABASE wdi1;
 
 \q --quits
 ```
@@ -280,7 +279,7 @@ $ \c library
 `INSERT` adds a row to a table...
 
 ```sql
-INSERT INTO authors(name, nationality, birth_year) VALUES ('Adam Bray', 'United States of America', 1985);
+INSERT INTO authors(name, nationality, birth_year) VALUES ('Toni Langley', 'United States of America', 1991);
 ```
 
 ### SELECT
@@ -295,7 +294,7 @@ SELECT * FROM authors;
 SELECT name, birth_year FROM authors;
 
 -- select rows that meet certain criteria
-SELECT * FROM authors WHERE name = 'James Baldwin';
+SELECT * FROM authors WHERE name = 'J.K. Rowling';
 ```
 
 ### UPDATE
@@ -303,7 +302,7 @@ SELECT * FROM authors WHERE name = 'James Baldwin';
 `UPDATE` updates values for one or more rows...
 
 ```sql
-UPDATE authors SET name = 'Adam B.', birth_year = 1986 WHERE name = 'Adam Bray';
+UPDATE authors SET name = 'Toni L.', birth_year = 1991 WHERE name = 'Toni Langley';
 ```
 
 ### DELETE
@@ -311,7 +310,7 @@ UPDATE authors SET name = 'Adam B.', birth_year = 1986 WHERE name = 'Adam Bray';
 `DELETE` removes rows from a table...
 
 ```sql
-DELETE FROM authors WHERE name = 'Adam B.';
+DELETE FROM authors WHERE name = 'Toni L.';
 ```
 
 ## Exercise!
@@ -388,7 +387,7 @@ the case in the real world.)
 
 ![one_to_many](images/one_to_many.png)
 
-## You Do: Books and Authors (Optional)
+## You Do: Books and Authors
 
 See advanced_queries.sql in the [library_sql](https://github.com/ga-dc/library_sql)
 exercise.
@@ -446,7 +445,7 @@ association with a specific category.
 
 ## Closing/Questions
 
-## Sample Quiz Questions
+## Review Questions
 
 * What is the distinctive feature of a relational database?
 * How is information stored in a relational database?
