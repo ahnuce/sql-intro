@@ -443,8 +443,6 @@ association with a specific category.
 
 ![many_to_many](images/many_to_many.png)
 
-## Closing/Questions
-
 ## Review Questions
 
 * What is the distinctive feature of a relational database?
