@@ -1,10 +1,8 @@
 # Intro to SQL
 
-# Databases
-
 ## Learning Objectives
 
-#### Basics of Databases, and SQL
+#### Basics of Databases and SQL
 
 **Concepts**
 - Explain what a database is and why you would use one
@@ -213,9 +211,7 @@ Next we're going to build a schema for a database in a sample application. It ca
 
 Instead of typing this into psql, we're going to do so by saving the schema to a `.sql` file and run it, just like we have with `.js` and `.rb` files.
 
-## You Do: Building Our Database (15 minutes / 1:50)
-
-> 10 minutes exercise. 5 minutes review.
+## We Do: Building Our Database (15 minutes / 1:50)
 
 1. Clone this
 [library SQL Exercise repo](https://github.com/ga-wdi-exercises/library_sql).
@@ -461,6 +457,6 @@ association with a specific category.
 
 ## Resources
 * [GA DC Three Part Lesson](https://github.com/ga-wdi-lessons/sql-intro/blob/master/readme.md)
-* ### Screencasts
+* Screencasts
     - GA DC WDI7 (Matt Scilipoti): [Part 1](https://youtu.be/cuPXKDMEhKw), [Part 2](https://youtu.be/wQtBDerdyKw)
     - ERDs: GA DC WDI7 (Matt Scilipoti): https://youtu.be/IDnOMi9jHgo
