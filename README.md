@@ -396,7 +396,7 @@ exercise.
 
 ## Bonus: Joins
 
-To SELECT information on two or more tables at ones, we can use a JOIN clause.
+To SELECT information on two or more tables at once, we can use a JOIN clause.
 This will produce rows that contain information from both tables. When JOINing
 two or more tables, we have to tell the database how to 'match up' the rows.
 (e.g. to make sure the author information is correct for each book).
