@@ -175,7 +175,7 @@ Every application's database will have one or more tables. You will recall, each
 Each table has a **schema**, which defines what columns it has. For each column the schema defines...
 
 - The column's name.
-- the column's data type.
+- The column's data type.
 - Any constraints for that column.
 
 ### Common Data Types
